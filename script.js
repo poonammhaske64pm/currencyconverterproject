@@ -23,9 +23,6 @@ const BASE_URL =
         }
         select.append(newOption);
     }
-    select.addEventListener("change", (event) => {
-        updateFlag(event.target);
-      });
   }
 
   const updateExchangeRate = async() => {
@@ -48,7 +45,7 @@ const BASE_URL =
     let finalAmount = amountValue * rate;
 
     message.innerText = `${amountValue} ${fromCurrency.value} = ${finalAmount} ${toCurrency.value}`;
-  }
+  };
   
   formButton.addEventListener("click", (event) => {
     
